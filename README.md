@@ -1,5 +1,5 @@
 # My_Home
-This is a super app, that has a revolutionary user experience. Instead of 6 - 1 app.
+This is a super app, that has a revolutionary user experience. Instead of 5 - 1 app.
 
 ![Snimak ekrana 2025-01-15 002057](https://github.com/user-attachments/assets/bb69a13f-77ff-4384-93e5-24157eb5f02e)
 
