@@ -65,13 +65,13 @@ class Program(customtkinter.CTk, My_Home_interface.My_Home_interface):
     @typing.override
     def __about_us__(self: typing.Self) -> None:
         if locale.getdefaultlocale()[0] == f"sr_RS":
-            tkinter.messagebox.showinfo(f"О нама", f"Ово је супер апликација, која има револуционарно корисничко искуство. Уместо 6 - 1 апликација. \nАутори: \n anonymous6598 \n Rastko14 \n Milao671")
+            tkinter.messagebox.showinfo(f"О нама", f"Ово је супер апликација, која има револуционарно корисничко искуство. Уместо 5 - 1 апликација. \nАутори: \n anonymous6598 \n Rastko14 \n Milao671")
 
         elif locale.getdefaultlocale()[0] == f"ru_RU":
-            tkinter.messagebox.showinfo(f"О нас", f"Это суперапп, которое имеет революционный пользовательский щпыт. Вместо 6 - 1 приложения. \nАвторы: \nanonymous6598 \nRastko14 \n Milao671")
+            tkinter.messagebox.showinfo(f"О нас", f"Это суперапп, которое имеет революционный пользовательский щпыт. Вместо 5 - 1 приложениe. \nАвторы: \nanonymous6598 \nRastko14 \n Milao671")
 
         else:
-            tkinter.messagebox.showinfo(f"About Us", f"This is a super app, that has a revolutionary user experience. Instead of 6 - 1 app. \nAuthors: \nanonymous6598 \n Rastko14 \n Milao671")
+            tkinter.messagebox.showinfo(f"About Us", f"This is a super app, that has a revolutionary user experience. Instead of 5 - 1 app. \nAuthors: \nanonymous6598 \n Rastko14 \n Milao671")
 
     @typing.override
     def __exit__(self: typing.Self) -> None:
