@@ -5,7 +5,7 @@ class AI_Window(customtkinter.CTk, My_Maps_AI_window_interface.My_Maps_AI_window
 	TITLE: typing.Final[str] = f"My Maps AI assistant"
 	HEIGHT: typing.Final[int] = 375
 	WIDTH: typing.Final[int] = 655
-	ICON: typing.Final[str] = f"Apps\My_Maps\my maps icon.ico"
+	ICON: typing.Final[str] = f"Apps\My_Maps\images\my maps icon.ico"
 	COLOR_THEME: typing.Final[str] = f"dark-blue"
 	WIDGET_SCALING: typing.Final[float] = 1.251
 	THEME: typing.Final[str] = f"system"

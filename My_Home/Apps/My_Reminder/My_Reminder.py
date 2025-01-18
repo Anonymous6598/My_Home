@@ -5,7 +5,7 @@ from customtkinter import *
 class Program(My_Reminder_screen.Tk, My_Reminder_interface.My_Reminder_interface):
     
     TITLE: typing.Final[str] = f"My Reminder "
-    ICON: typing.Final[str] = f"Apps\My_Reminder\my reminder icon.ico"
+    ICON: typing.Final[str] = f"Apps\My_Reminder\images\my reminder icon.ico"
     COLOR_THEME: typing.Final[str] = f"dark-blue"
     APPEREANCE: typing.Final[str] = f"system"
     WIDGET_SCALING: typing.Final[int] = 1.251

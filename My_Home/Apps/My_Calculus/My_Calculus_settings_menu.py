@@ -1,19 +1,19 @@
 import customtkinter, tkinter.messagebox, pickle, typing, My_Calculus_settings_window_interface, My_Calculus, locale
 
-with open(f"Apps\My_Calculus\my_calculus_text_color.pickle", f"rb+") as text_color_data: text_color: str = pickle.load(text_color_data)
+with open(f"Apps\My_Calculus\pickle\my_calculus_text_color.pickle", f"rb+") as text_color_data: text_color: str = pickle.load(text_color_data)
 
-with open(f"Apps\My_Calculus\my_calculus_expression_entry_color.pickle", f"rb+") as expression_entry_color_data: expression_entry_color: str = pickle.load(expression_entry_color_data)
+with open(f"Apps\My_Calculus\pickle\my_calculus_expression_entry_color.pickle", f"rb+") as expression_entry_color_data: expression_entry_color: str = pickle.load(expression_entry_color_data)
 
-with open(f"Apps\My_Calculus\my_calculus_expression_entry_text_color.pickle", f"rb+") as expression_entry_text_color_data: expression_entry_text_color: str = pickle.load(expression_entry_text_color_data)
+with open(f"Apps\My_Calculus\pickle\my_calculus_expression_entry_text_color.pickle", f"rb+") as expression_entry_text_color_data: expression_entry_text_color: str = pickle.load(expression_entry_text_color_data)
 
-with open(f"Apps\My_Calculus\my_calculus_button_color.pickle", f"rb+") as button_color_data: button_color: str = pickle.load(button_color_data)
+with open(f"Apps\My_Calculus\pickle\my_calculus_button_color.pickle", f"rb+") as button_color_data: button_color: str = pickle.load(button_color_data)
 
 class Settings_window(customtkinter.CTkToplevel, My_Calculus_settings_window_interface.My_Calculus_settings_window_interface):
      
     WIDTH: typing.Final[int] = 655 
     HEIGHT: typing.Final[int] = 571
     TITLE: typing.Final[str] = f"My Calculus settings window"
-    ICON: typing.Final[str] = f"Apps\My_Calculus\my calculus icon.ico"
+    ICON: typing.Final[str] = f"Apps\My_Calculus\images\my calculus icon.ico"
 
     def __init__(self, *args, **kwargs) -> None:
         customtkinter.CTkToplevel.__init__(self, *args, **kwargs)
@@ -91,7 +91,7 @@ class Settings_window(customtkinter.CTkToplevel, My_Calculus_settings_window_int
     @typing.override
     def __change_text_color__(self, pickle_serializer: pickle) -> None:
         self.main_screen_settings_customatization_text_color_option_data: str = self.main_screen_settings_customatization_text_color_option.get()
-        with open(f"Apps\My_Calculus\my_calculus_text_color.pickle", f"wb+") as self.text_color_data: pickle.dump(self.main_screen_settings_customatization_text_color_option_data, self.text_color_data)            
+        with open(f"Apps\My_Calculus\pickle\my_calculus_text_color.pickle", f"wb+") as self.text_color_data: pickle.dump(self.main_screen_settings_customatization_text_color_option_data, self.text_color_data)            
  
         if locale.getdefaultlocale()[0] == f"sr_RS": tkinter.messagebox.showwarning(title=f"Пажња", message=f"Рестартуј програм")
             
@@ -102,7 +102,7 @@ class Settings_window(customtkinter.CTkToplevel, My_Calculus_settings_window_int
     @typing.override
     def __change_expression_entry_color__(self, pickle_serialization: pickle) -> None:
         self.main_screen_settings_customatization_expression_entry_color_option_data: str = self.main_screen_settings_customatization_expression_entry_color_option.get()
-        with open(f"Apps\My_Calculus\my_calculus_expression_entry_color.pickle", f"wb+") as self.expression_entry_color_data: pickle.dump(self.main_screen_settings_customatization_expression_entry_color_option_data, self.expression_entry_color_data)
+        with open(f"Apps\My_Calculus\pickle\my_calculus_expression_entry_color.pickle", f"wb+") as self.expression_entry_color_data: pickle.dump(self.main_screen_settings_customatization_expression_entry_color_option_data, self.expression_entry_color_data)
 
         if locale.getdefaultlocale()[0] == f"sr_RS": tkinter.messagebox.showwarning(title=f"Пажња", message=f"Рестартуј програм")
             
@@ -113,7 +113,7 @@ class Settings_window(customtkinter.CTkToplevel, My_Calculus_settings_window_int
     @typing.override
     def __change_expression_entry_text_color__(self, pickle_serialization: pickle) -> None:
         self.main_screen_settings_customatization_expression_entry_text_color_option_data: str = self.main_screen_settings_customatization_expression_entry_text_color_option.get()
-        with open(f"Apps\My_Calculus\my_calculus_expression_entry_text_color.pickle", f"wb+") as self.expression_entry_text_color_data: pickle.dump(self.main_screen_settings_customatization_expression_entry_text_color_option_data, self.expression_entry_text_color_data)
+        with open(f"Apps\My_Calculus\pickle\my_calculus_expression_entry_text_color.pickle", f"wb+") as self.expression_entry_text_color_data: pickle.dump(self.main_screen_settings_customatization_expression_entry_text_color_option_data, self.expression_entry_text_color_data)
 
         if locale.getdefaultlocale()[0] == f"sr_RS": tkinter.messagebox.showwarning(title=f"Пажња", message=f"Рестартуј програм")
             
@@ -124,7 +124,7 @@ class Settings_window(customtkinter.CTkToplevel, My_Calculus_settings_window_int
     @typing.override
     def __change_button_color__(self, pickle_serialization: pickle) -> None:
         self.main_screen_settings_customatization_button_color_option_data: str = self.main_screen_settings_customatization_button_color_option.get()
-        with open(f"Apps\My_Calculus\my_calculus_button_color.pickle", f"wb+") as self.button_color_data: pickle.dump(self.main_screen_settings_customatization_button_color_option_data, self.button_color_data)
+        with open(f"Apps\My_Calculus\pickle\my_calculus_button_color.pickle", f"wb+") as self.button_color_data: pickle.dump(self.main_screen_settings_customatization_button_color_option_data, self.button_color_data)
 
         if locale.getdefaultlocale()[0] == f"sr_RS": tkinter.messagebox.showwarning(title=f"Пажња", message=f"Рестартуј програм")
             

@@ -5,7 +5,7 @@ class My_Calculus_AI_window(customtkinter.CTk, My_Calculus_AI_window_interface.M
 	HEIGHT: typing.Final[int] = 375
 	WIDTH: typing.Final[int] = 655
 	TITLE: typing.Final[str] = f"My Claculus AI assistant"
-	ICON: typing.Final[str] = f"Apps\My_Calculus\my calculus icon.ico"
+	ICON: typing.Final[str] = f"Apps\My_Calculus\images\my calculus icon.ico"
 	COLOR_THEME: typing.Final[str] = f"dark-blue"
 	WIDGET_SCALING: typing.Final[float] = 1.251
 	THEME: typing.Final[str] = f"system"

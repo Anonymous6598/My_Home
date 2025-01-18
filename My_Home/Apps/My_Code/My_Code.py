@@ -5,7 +5,7 @@ import My_Code_Interface, tkinter.messagebox, tkinter.filedialog, typing, locale
 class Program(My_Code_window.Tk, My_Code_Interface.My_Code_Interface):
     
     TITLE: typing.Final[str] = f"My Code  "
-    ICON: typing.Final[str] = f"Apps\My_Code\My Code icon.ico"
+    ICON: typing.Final[str] = f"Apps\My_Code\images\My Code icon.ico"
     COLOR_THEME: typing.Final[str] = f"dark-blue"
     THEME: typing.Final[str] = f"system"
     

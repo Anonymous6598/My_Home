@@ -5,7 +5,7 @@ class My_Code_AI_Window(customtkinter.CTk, My_Code_AI_window_interface.My_Code_A
 	TITLE: typing.Final[str] = f"My Code AI assistant"
 	HEIGHT: typing.Final[int] = 300
 	WIDTH: typing.Final[int] = 525
-	ICON: typing.Final[str] = f"Apps\My_Code\My Code icon.ico"
+	ICON: typing.Final[str] = f"Apps\My_Code\images\My Code icon.ico"
 	THEME: typing.Final[str] = f"system"
 
 	def __init__(self: typing.Self, *args, **kwargs) -> None:

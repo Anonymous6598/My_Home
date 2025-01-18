@@ -5,7 +5,7 @@ class AI_Window(customtkinter.CTk, My_Diary_AI_window_interface.My_Diary_AI_wind
 	TITLE: typing.Final[str] = f"My Diary AI assistant"
 	HEIGHT: typing.Final[int] = 375
 	WIDTH: typing.Final[int] = 655
-	ICON: typing.Final[str] = f"Apps\My_Diary\my_diary_icon.ico"
+	ICON: typing.Final[str] = f"Apps\My_Diary\images\my_diary_icon.ico"
 	COLOR_THEME: typing.Final[str] = f"dark-blue"
 	WIDGET_SCALING: typing.Final[float] = 1.251
 	THEME: typing.Final[str] = f"system"

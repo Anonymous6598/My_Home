@@ -3,7 +3,7 @@ import customtkinter, CTkPDFViewer, typing, My_Diary_PDF_viewer_interface
 class My_Diary_PDF_viewer(customtkinter.CTkToplevel, My_Diary_PDF_viewer_interface.My_Diary_PDF_reader_interface):
     
     TITLE: typing.Final[str] = f"My Diary PDF reader (beta)"
-    ICON: typing.Final[str] = f"Apps\My_Diary\my_diary_icon.ico"
+    ICON: typing.Final[str] = f"Apps\My_Diary\images\my_diary_icon.ico"
 
     def __init__(self: typing.Self, *args: typing.Any, **kwargs: typing.Any) -> None:
         customtkinter.CTkToplevel.__init__(self, *args, **kwargs)

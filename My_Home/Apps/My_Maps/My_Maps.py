@@ -3,7 +3,7 @@ import customtkinter, tkintermapview, typing, geocoder, CTkMenuBar, locale, My_M
 class Program(customtkinter.CTk, My_Maps_Interface.My_Maps_Interface):
     
     TITLE: typing.Final[str] = f"My Maps  "
-    ICON: typing.Final[str] = f"Apps\My_Maps\my maps icon.ico"
+    ICON: typing.Final[str] = f"Apps\My_Maps\images\my maps icon.ico"
     WIDGET_SCALING: typing.Final[int] = 1.251
     
     def __init__(self: typing.Self, *args: typing.Any, **kwargs: typing.Any) -> None:

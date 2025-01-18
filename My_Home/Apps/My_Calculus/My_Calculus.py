@@ -2,13 +2,13 @@ from math import *
 from My_Calculus_math_functions import *
 import customtkinter, tkinter, tkinter.messagebox, pickle, unicodedata, sys, numpy, matplotlib, matplotlib.pyplot, typing, My_Calculus_interface, locale, re, os, subprocess, platform, My_Calculus_settings_menu
 
-with open(f"Apps\My_Calculus\my_calculus_text_color.pickle", f"rb+") as text_color_data: text_color: str = pickle.load(text_color_data)
+with open(f"Apps\My_Calculus\pickle\my_calculus_text_color.pickle", f"rb+") as text_color_data: text_color: str = pickle.load(text_color_data)
 
-with open(f"Apps\My_Calculus\my_calculus_expression_entry_color.pickle", f"rb+") as expression_entry_color_data: expression_entry_color: str = pickle.load(expression_entry_color_data)
+with open(f"Apps\My_Calculus\pickle\my_calculus_expression_entry_color.pickle", f"rb+") as expression_entry_color_data: expression_entry_color: str = pickle.load(expression_entry_color_data)
 
-with open(f"Apps\My_Calculus\my_calculus_expression_entry_text_color.pickle", f"rb+") as expression_entry_text_color_data: expression_entry_text_color: str = pickle.load(expression_entry_text_color_data)
+with open(f"Apps\My_Calculus\pickle\my_calculus_expression_entry_text_color.pickle", f"rb+") as expression_entry_text_color_data: expression_entry_text_color: str = pickle.load(expression_entry_text_color_data)
 
-with open(f"Apps\My_Calculus\my_calculus_button_color.pickle", f"rb+") as button_color_data: button_color: str = pickle.load(button_color_data)
+with open(f"Apps\My_Calculus\pickle\my_calculus_button_color.pickle", f"rb+") as button_color_data: button_color: str = pickle.load(button_color_data)
 
 matplotlib.use(f"TKAgg")
 
@@ -18,7 +18,7 @@ class Program(customtkinter.CTk, My_Calculus_interface.My_Calculus_interface):
     HEIGHT: typing.Final[int] = 565
     TITLE: typing.Final[str] = f"My Calculus"
     COLOR_THEME: typing.Final[str] = f"dark-blue"
-    ICON: typing.Final[str] = f"Apps\My_Calculus\my calculus icon.ico"
+    ICON: typing.Final[str] = f"Apps\My_Calculus\images\my calculus icon.ico"
     WIDGET_SCALING: typing.Final[float] = 1.251
 
     def __init__(self: typing.Self, *args, **kwargs) -> None:
@@ -504,10 +504,10 @@ class Program(customtkinter.CTk, My_Calculus_interface.My_Calculus_interface):
         
     def __ai_window__(self: typing.Self) -> None:        
         if platform.system() == f"Linux":
-            os.popen(f"python3 My_Calculus_AI_window.py")
+            os.popen(f"python3 Apps\My_Calculus\My_Calculus_AI_window.py")
 
         else:
-            os.startfile(f"My_Calculus_AI_window.py", show_cmd=False)
+            os.startfile(f"Apps\My_Calculus\My_Calculus_AI_window.py", show_cmd=False)
 
     @typing.override
     def __settings__(self: typing.Self) -> None:
@@ -548,7 +548,7 @@ class Menu_Option(customtkinter.CTkToplevel):
     WIDTH: typing.Final[int] = 300
     HEIGHT: typing.Final[int] = 350
     TITLE: typing.Final[str] = f"Menu"
-    ICON: typing.Final[str] = f"Apps\My_Calculus\my calculus icon.ico"
+    ICON: typing.Final[str] = f"Apps\My_Calculus\images\my calculus icon.ico"
 
     def __init__(self: typing.Self, *args, **kwargs) -> None:
         customtkinter.CTkToplevel.__init__(self, *args, **kwargs)
@@ -604,7 +604,7 @@ class Scientific_calculator_additional_layout(customtkinter.CTkToplevel):
     WIDTH: typing.Final[int] = 965 
     HEIGHT: typing.Final[int] = 411
     TITLE: typing.Final[str] = f"My Calculus scientific calculator additional layout"
-    ICON: typing.Final[str] = f"Apps\My_Calculus\my calculus icon.ico"
+    ICON: typing.Final[str] = f"Apps\My_Calculus\images\my calculus icon.ico"
 
     def __init__(self: typing.Self, *args, **kwargs) -> None:
         customtkinter.CTkToplevel.__init__(self, *args, **kwargs)
@@ -714,7 +714,7 @@ class Graphical_claculator_adittional_layout(customtkinter.CTkToplevel):
     WIDTH: typing.Final[int] = 966 
     HEIGHT: typing.Final[int] = 56
     TITLE: typing.Final[str] = f"My Calculus graphical calculator additional layout"
-    ICON: typing.Final[str] = f"Apps\My_Calculus\my calculus icon.ico"
+    ICON: typing.Final[str] = f"Apps\My_Calculus\images\my calculus icon.ico"
 
     def __init__(self: typing.Self, *args, **kwargs) -> None:
         customtkinter.CTkToplevel.__init__(self, *args, **kwargs)

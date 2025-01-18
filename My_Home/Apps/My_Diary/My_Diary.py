@@ -2,13 +2,13 @@ import tkinter, tkinter.filedialog, tkinter.messagebox, pickle, os, sys, docx, t
 from tkinterdnd2 import *
 from customtkinter import *
 
-with open(f"Apps\My_Diary\my_diary_saved_text.pickle", f"rb+") as text_data: autosaved_text: str = pickle.load(text_data)
+with open(f"Apps\My_Diary\pickle\my_diary_saved_text.pickle", f"rb+") as text_data: autosaved_text: str = pickle.load(text_data)
 
 class Program(My_Diary_window.Tk, My_Diary_interface.My_Diary_interface):
 
 	TITLE: typing.Final[str] = f"My Diary"
 	COLOR_THEME: typing.Final[str] = f"dark-blue"
-	ICON: typing.Final[str] = f"Apps\My_Diary\my_diary_icon.ico"
+	ICON: typing.Final[str] = f"Apps\My_Diary\images\my_diary_icon.ico"
 	WIDGET_SCALING: typing.Final[float] = 1.251
 	THEME: typing.Final[str] = f"system"
 
@@ -415,7 +415,7 @@ class Program(My_Diary_window.Tk, My_Diary_interface.My_Diary_interface):
 	
 	@typing.override		
 	def __text_autosave__(self: typing.Self, event: str | None = None) -> None: 
-		with open(f"Apps\My_Diarymy_diary_saved_text.pickle", f"wb+") as self.text_data: pickle.dump(self.main_screen_frame_textbox.get(f"1.0", tkinter.END), self.text_data)
+		with open(f"Apps\My_Diary\pickle\my_diary_saved_text.pickle", f"wb+") as self.text_data: pickle.dump(self.main_screen_frame_textbox.get(f"1.0", tkinter.END), self.text_data)
 		
 	def __enter_text_autosave__(self: typing.Self, event: str | None = None) -> None:
 		self.main_screen_frame_textbox.insert(f"1.0", autosaved_text)
@@ -523,7 +523,7 @@ class Terminal(CTkToplevel):
 	HEIGHT: typing.Final[int] = 375
 	WIDTH: typing.Final[int] = 650
 	TITLE: typing.Final[str] = f"My Diary action terminal"
-	ICON: typing.Final[str] = f"Apps\My_Diary\my_diary_icon.ico"
+	ICON: typing.Final[str] = f"Apps\My_Diary\images\my_diary_icon.ico"
 
 	def __init__(self: typing.Self, *args, **kwargs) -> None:
 		CTkToplevel.__init__(self, *args, **kwargs)
@@ -731,7 +731,7 @@ class Terminal(CTkToplevel):
 class Bash(CTkToplevel):
 	
 	TITLE: typing.Final[str] = f"My Diary Bash window"
-	ICON: typing.Final[str] = f"Apps\My_Diary\my_diary_icon.ico"
+	ICON: typing.Final[str] = f"Apps\My_Diary\images\my_diary_icon.ico"
 	
 	def __init__(self: typing.Self, *args, **kwargs):
 		CTkToplevel.__init__(self, *args, **kwargs)
