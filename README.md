@@ -3,7 +3,7 @@
 >[!Caution]
 >This program is no longer supported and will be deprecated in the near future.
 >
->Repository will be transferred to Rastko14
+>Repository will be archived
 
 This is a super app, that has a revolutionary user experience. Instead of 5 - 1 app.
 
